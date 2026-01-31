@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class EraseAfterNotScreen5S : MonoBehaviour
+public class EraseAfterNotScreen : MonoBehaviour
 {
     [Header("画面外で削除までの時間（秒）")]
-    public float timeToErase = 5f;
+    public float timeToErase = 3f;
 
     private float offScreenTimer = 0f;
     private Camera mainCam;
@@ -33,7 +33,7 @@ public class EraseAfterNotScreen5S : MonoBehaviour
             if (offScreenTimer >= timeToErase)
             {
                 Destroy(gameObject);
-                Debug.Log($"{gameObject.name} を削除（画面外5秒以上）");
+               
             }
         }
     }

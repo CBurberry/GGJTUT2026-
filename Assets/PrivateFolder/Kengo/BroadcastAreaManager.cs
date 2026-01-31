@@ -17,6 +17,12 @@ public class BroadcastAreaManager : MonoBehaviour
 
     private int score = 0;
 
+    // ↓ Inspectorで確認できるデバッグ用カウント
+    [Header("デバッグ用カウント")]
+    public int insideCount = 0;
+    public int plusCount = 0;
+    public int minusCount = 0;
+
     void Start()
     {
         if (areaRect == null) Debug.LogError("areaRect が未設定！");
@@ -30,6 +36,11 @@ public class BroadcastAreaManager : MonoBehaviour
     {
         if (areaRect == null || scoreText == null) return;
 
+        // デバッグカウントリセット
+        insideCount = 0;
+        plusCount = 0;
+        minusCount = 0;
+
         // targets 配列だけでなく、シーン上の ObjClickJudge を全て取得してループ
         ObjClickJudge[] allTargets = GameObject.FindObjectsByType<ObjClickJudge>(FindObjectsSortMode.None);
 
@@ -39,16 +50,20 @@ public class BroadcastAreaManager : MonoBehaviour
 
             if (IsInsideUI(target.transform.position))
             {
+                insideCount++;
+
                 // ここで赤かどうかをチェック
                 if (target.IsClicked)
                 {
                     score += deltaPerFrame;
-                    Debug.Log(target.name + " 枠内：赤 → +");
+                    plusCount++;
+                    //Debug.Log(target.name + " 枠内：赤 → +");
                 }
                 else
                 {
                     score -= deltaPerFrame;
-                    Debug.Log(target.name + " 枠内：赤以外 → -");
+                    minusCount++;
+                    //Debug.Log(target.name + " 枠内：赤以外 → -");
                 }
             }
         }
