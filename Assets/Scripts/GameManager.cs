@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI timeText;
     public TextMeshProUGUI scoreText;
 
+
+    public int seconds;
+
     private bool isFinished = false;
 
     void Start()
@@ -51,7 +54,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                int seconds = Mathf.FloorToInt(elapsedTime % 60f);
+                seconds = Mathf.FloorToInt(elapsedTime % 60f);
                 timeText.text = string.Format("9:{0:D2}", seconds); // 9:XX Œ`Ž®
             }
         }
