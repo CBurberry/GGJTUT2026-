@@ -26,10 +26,10 @@ public class LookAtCamera : MonoBehaviour
         if (dir.sqrMagnitude > 0.001f)
         {
             // 親の回転に影響されず、ワールド座標で向く
-            //transform.rotation = Quaternion.LookRotation(dir, Vector3.up) * Quaternion.Euler(0, 180f, 0);
+            transform.rotation = Quaternion.LookRotation(dir, Vector3.up) * Quaternion.Euler(0, 180f, 0);
 
             //正面を向く
-            transform.rotation = Quaternion.Euler(0, 0f, 0);
+            //transform.rotation = Quaternion.Euler(0, 0f, 0);
 
         }
     }
