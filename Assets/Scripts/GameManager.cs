@@ -1,43 +1,58 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public float timeLimit = 60f;      // 制限時間
-    public float currentRating = 50f;  // 視聴率
+    public float timeLimit = 60f;
+    public float currentRating = 50f;
+    public GameObject gameOverPanel;
 
-    private bool isGameActive = true;  
+    private bool isFinished = false;
 
     void Update()
     {
-        if (!isGameActive) return; 
-        
+        if (isFinished) return;
+
         timeLimit -= Time.deltaTime;
-
-        //クリア判定
-        if (timeLimit <= 0)
-        {
-            GameClear();
-        }
-
-        // ゲームオーバー判定
+        
         if (currentRating <= 0)
         {
             GameOver();
+        }
+        else if (timeLimit <= 0)
+        {
+            GameClear();
+        }
+    }
+
+    void GameOver()
+    {
+        isFinished = true;
+        currentRating = 0;
+
+        
+        Time.timeScale = 0f;
+
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(true);
         }
     }
 
     void GameClear()
     {
-        isGameActive = false;
-        Debug.Log("ステージクリア！");
+        isFinished = true;
        
+        Time.timeScale = 0f;
+        Debug.Log("クリア！");
     }
 
-    void GameOver()
+    public void RetryGame()
     {
-        isGameActive = false;
-        Debug.Log("放送事故！ゲームオーバー");
-        
+        Time.timeScale = 1f;
+
+        string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
 }
