@@ -52,11 +52,15 @@ public class CountSecond : MonoBehaviour
         //撮影処理呼び出し
         yield return new WaitForSeconds(countFinishValue);
 
+        StartREC();
+
+
+    }
+    //撮影開始の処理
+    public void StartREC()
+    {
         countImage.gameObject.SetActive(false);//スタート消去
         countText.gameObject.SetActive(false);//カウント消去
-
-
-
     }
 
     private IEnumerator AnimateText()
