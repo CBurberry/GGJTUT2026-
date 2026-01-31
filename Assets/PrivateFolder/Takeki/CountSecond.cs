@@ -1,5 +1,5 @@
 using UnityEngine;
-using TMPro; 
+using TMPro;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -9,58 +9,65 @@ public class CountSecond : MonoBehaviour
     [SerializeField] private TextMeshProUGUI countText;
     [SerializeField] private GameObject countImage;
     [SerializeField] private GameObject StartButton;
+
     [Header("Settings")]
     [SerializeField] private int countdownValue = 5;
-    [SerializeField] private int countFinishValue = 1;
+    [SerializeField] private float countFinishDisplayTime = 1.0f; // スタート表示の時間
 
     [Header("Animation Settings")]
     [Range(1f, 5f)]
-    [SerializeField] private float maxScale = 2f; // どのくらい大きくするか
-    [SerializeField] private float animationDuration = 1.0f; // 演出にかける時間（1秒以内）
+    [SerializeField] private float maxScale = 2f;
+    [SerializeField] private float animationDuration = 1.0f;
 
     private Coroutine _countdownCoroutine;
 
-    // 撮影開始ボタンから呼び出す関数
+    void Start()
+    {
+        // 時間を止める
+        Time.timeScale = 0f;
+    }
     public void OnStartREC()
     {
-        // 既に動いている場合は止める（二重起動防止）
+
         if (_countdownCoroutine != null) StopCoroutine(_countdownCoroutine);
-
         _countdownCoroutine = StartCoroutine(CountdownRoutine());
-
     }
 
     private IEnumerator CountdownRoutine()
     {
         int currentCount = countdownValue;
         StartButton.SetActive(false);
+        countText.gameObject.SetActive(true);
+
         while (currentCount > 0)
         {
-            // テキストの更新
             countText.text = currentCount.ToString();
 
-            // 演出（拡大＆フェードアウト）を開始
+            // 演出（AnimateTextもunscaledTimeで動くように修正）
             yield return StartCoroutine(AnimateText());
 
             currentCount--;
         }
-        
+
+        // カウント終了後の「START」画像などの表示
         countImage.gameObject.SetActive(true);
         countText.text = "";
         countText.gameObject.SetActive(false);
 
-        //撮影処理呼び出し
-        yield return new WaitForSeconds(countFinishValue);
+        // 指定した秒数（実時間）待機
+        yield return new WaitForSecondsRealtime(countFinishDisplayTime);
 
+        // 2. 撮影開始と同時に時間を動かす
         StartREC();
-
-
     }
-    //撮影開始の処理
+
     public void StartREC()
     {
-        countImage.gameObject.SetActive(false);//スタート消去
-        countText.gameObject.SetActive(false);//カウント消去
+        Time.timeScale = 1f; // 時間を再開
+        countImage.gameObject.SetActive(false);
+        countText.gameObject.SetActive(false);
+
+        Debug.Log("Recording Started and Time Resumed!");
     }
 
     private IEnumerator AnimateText()
@@ -70,21 +77,18 @@ public class CountSecond : MonoBehaviour
         Vector3 targetScale = Vector3.one * maxScale;
         Color originalColor = countText.color;
 
+        // 時間が止まっていても動くように Time.unscaledDeltaTime を使用
         while (elapsed < animationDuration)
         {
-            elapsed += Time.deltaTime;
-            float t = elapsed / animationDuration;
+            elapsed += Time.unscaledDeltaTime; // ここがポイント
+            float t = Mathf.Clamp01(elapsed / animationDuration);
 
-            // 1. サイズの拡大 (Lerpを使用)
             countText.transform.localScale = Vector3.Lerp(initialScale, targetScale, t);
-
-            // 2. 透明度のフェードアウト
             countText.color = new Color(originalColor.r, originalColor.g, originalColor.b, 1f - t);
 
             yield return null;
         }
 
-        // 次のカウントに備えて色とスケールをリセット
         countText.transform.localScale = initialScale;
         countText.color = originalColor;
     }

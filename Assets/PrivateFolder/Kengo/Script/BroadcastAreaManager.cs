@@ -15,7 +15,7 @@ public class BroadcastAreaManager : MonoBehaviour
     [Header("増減量")]
     public int deltaPerFrame = 1;
 
-    private int score = 0;
+    public int score = 0;
 
     // ↓ Inspectorで確認できるデバッグ用カウント
     [Header("デバッグ用カウント")]
