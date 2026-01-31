@@ -12,12 +12,13 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - _EMISSION
   - _METALLICGLOSSMAP
   - _NORMALMAP
   m_InvalidKeywords:
   - _METALLICSPECGLOSSMAP
   - _OCCLUSIONMAP
-  m_LightmapFlags: 7
+  m_LightmapFlags: 3
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -50,7 +51,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: 35e572e6b39d80d418c6b91a07b38ffd, type: 3}
+        m_Texture: {fileID: 2800000, guid: 28324b3e9098448448cefe8426f3def0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -89,6 +90,6 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.99999994, g: 0.99999994, b: 0.99999994, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 0.38490558, g: 0.25490916, b: 0.25490916, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
