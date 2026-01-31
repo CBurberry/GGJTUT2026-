@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        Time.timeScale = 1f; // ”O‚Ì‚½‚ß’Ç‰Á
+        
         if (gameOverPanel != null) gameOverPanel.SetActive(false);
         if (gameClearPanel != null) gameClearPanel.SetActive(false);
         if (timeText != null) timeText.gameObject.SetActive(true);
