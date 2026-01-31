@@ -6271,6 +6271,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3162885133171702074, guid: 4dfa123e550a9484da84a74e37a3f64e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8099378247091996095, guid: 4dfa123e550a9484da84a74e37a3f64e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.95
@@ -6321,7 +6325,7 @@ PrefabInstance:
       objectReference: {fileID: 1418427337}
     - target: {fileID: 8827705008666861932, guid: 4dfa123e550a9484da84a74e37a3f64e, type: 3}
       propertyPath: timeLimit
-      value: 60
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8827705008666861932, guid: 4dfa123e550a9484da84a74e37a3f64e, type: 3}
       propertyPath: gameOverPanel

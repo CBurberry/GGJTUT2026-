@@ -3,48 +3,51 @@ using System;
 
 public class ObjClickJudge : MonoBehaviour
 {
-    private Renderer rend;
+    // true = 良い放送 / false = 悪い放送
+    public bool IsGoodBroadcasting { get; private set; } = false;
 
-    // 外部から参照できるフラグ
-    public bool IsClicked { get; private set; } = false;
+    [Header("初期状態設定")]
+    [Tooltip("ONならランダム / OFFなら手動指定")]
+    public bool useRandomStart = false;
 
-    // 一度だけクリック可能にするフラグ
+    [Tooltip("useRandomStart が OFF のときに使用（true=良い / false=悪い）")]
+    public bool startAsGood = false;
+
+    // 一度だけクリック可能
     public bool clicked = false;
 
-    // クリック時に通知するイベント
     public event Action OnClicked;
 
     private ClickToShowMask showMask;
 
     void Awake()
     {
-        rend = GetComponent<Renderer>();
-        // 修正後
-        IsClicked = UnityEngine.Random.value > 0.8f;
-        rend.material.color = IsClicked ? Color.red : Color.blue;
+        // ★ 初期状態決定
+        if (useRandomStart)
+        {
+            IsGoodBroadcasting = UnityEngine.Random.value > 0.8f;
+        }
+        else
+        {
+            IsGoodBroadcasting = startAsGood;
+        }
 
-        Debug.Log($"{name} Awake: 初期色 = {(IsClicked ? "赤" : "青")}");
+        Debug.Log($"{name} Awake: IsGoodBroadcasting = {IsGoodBroadcasting} (Random={useRandomStart})");
 
         showMask = GetComponent<ClickToShowMask>();
     }
 
     void OnMouseDown()
     {
-        if (clicked)
-        {
-            Debug.Log($"{name} OnMouseDown: すでにクリック済み");
-            return;
-        }
+        if (clicked) return;
 
-
-
-        IsClicked = !IsClicked;
-        rend.material.color = IsClicked ? Color.red : Color.blue;
+        // 状態反転
+        IsGoodBroadcasting = !IsGoodBroadcasting;
         clicked = true;
 
-        Debug.Log($"{name} OnMouseDown: クリックされました。IsClicked = {IsClicked}, clicked = {clicked}");
+        Debug.Log($"{name} Clicked: IsGoodBroadcasting = {IsGoodBroadcasting}");
 
-        // クリックされたことを通知
         showMask.ShowChild();
+        OnClicked?.Invoke();
     }
 }
