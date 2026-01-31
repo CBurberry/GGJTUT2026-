@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.soupday.cc3_unity_tools": "file:C:/Users/USER/Downloads/CCIC_Auto_Setup_for_Unity/CCIC Auto Setup for Unity/Install in Unity/CCiC-Unity-Tools",
     "com.unity.ai.navigation": "2.0.10",
     "com.unity.collab-proxy": "2.10.2",
     "com.unity.feature.development": "1.0.2",
