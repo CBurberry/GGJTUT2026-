@@ -225,6 +225,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1055292281}
+  - component: {fileID: 1055292282}
   - component: {fileID: 1055292280}
   m_Layer: 0
   m_Name: VoiceTest
@@ -242,13 +243,13 @@ AudioSource:
   m_GameObject: {fileID: 1055292279}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 4523009379049829735, guid: cee95fc38ea4f0f41ad6373e7b2c4688, type: 2}
+  OutputAudioMixerGroup: {fileID: 490919477624974508, guid: cee95fc38ea4f0f41ad6373e7b2c4688, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 901497365c554704994ab4aceed7c5d2, type: 3}
-  m_PlayOnAwake: 1
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -345,6 +346,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1055292282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055292279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4502ec538bfbee443a9ac81aa18ac477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 2db5955e71659e745ad35afc238395ea, type: 3}
+  - {fileID: 8300000, guid: 3bd711c6319e0d444bf162954bbcec9b, type: 3}
+  - {fileID: 8300000, guid: 6f04942326cdf374cbaf1afc2253dd34, type: 3}
+  - {fileID: 8300000, guid: 2f75b38a1eb4f93419aac92b551646d9, type: 3}
+  - {fileID: 8300000, guid: 9b0ba5a95093eac439a720da04003d0a, type: 3}
+  - {fileID: 8300000, guid: 32c6d85bd29f2a946b10afae961a0553, type: 3}
+  - {fileID: 8300000, guid: 7674e44521b182e47ba75051a7a3b958, type: 3}
+  - {fileID: 8300000, guid: 078935b31a1640a42b9c054a7cbf5a0c, type: 3}
+  - {fileID: 8300000, guid: 8ecee4c26a183704f80f4a9d0fcc6d0d, type: 3}
+  - {fileID: 8300000, guid: b6101ec6bd725e04baafddd2dbd2fa06, type: 3}
+  source: {fileID: 1055292280}
+  time: 5
+  clipNum: 0
 --- !u!1 &1248228998
 GameObject:
   m_ObjectHideFlags: 0
