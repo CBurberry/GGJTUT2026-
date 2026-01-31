@@ -346,7 +346,7 @@ GameObject:
   - component: {fileID: 260109068}
   - component: {fileID: 260109067}
   m_Layer: 0
-  m_Name: PS
+  m_Name: PrefabSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1110,7 +1110,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1975791227
 BoxCollider:
   m_ObjectHideFlags: 0
