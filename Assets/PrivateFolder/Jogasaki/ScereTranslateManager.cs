@@ -16,7 +16,7 @@ public class ScereTranslateManager : MonoBehaviour
 
     void Update()
     {
-        score = 50 + broadcastAreaManager.score / 200;
+        score = 50f + broadcastAreaManager.score / 200f;
         slliderArea.Score_Slider_controller(score);
     }
 
