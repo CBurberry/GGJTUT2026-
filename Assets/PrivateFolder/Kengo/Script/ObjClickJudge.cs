@@ -20,7 +20,7 @@ public class ObjClickJudge : MonoBehaviour
     {
         rend = GetComponent<Renderer>();
         // C³Œã
-        IsClicked = UnityEngine.Random.value > 0.5f;
+        IsClicked = UnityEngine.Random.value > 0.8f;
         rend.material.color = IsClicked ? Color.red : Color.blue;
 
         Debug.Log($"{name} Awake: ‰ŠúF = {(IsClicked ? "Ô" : "Â")}");

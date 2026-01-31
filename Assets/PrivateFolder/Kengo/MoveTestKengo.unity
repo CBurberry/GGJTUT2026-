@@ -346,7 +346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 5590684745239292538, guid: c5ab3164d095e514d99374abf906d27b, type: 3}
-  spawnInterval: 1.5
+  spawnInterval: 1.3
 --- !u!4 &89162893
 Transform:
   m_ObjectHideFlags: 0
@@ -425,7 +425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 5590684745239292538, guid: c5ab3164d095e514d99374abf906d27b, type: 3}
-  spawnInterval: 1.5
+  spawnInterval: 1.3
 --- !u!4 &89864515
 Transform:
   m_ObjectHideFlags: 0
