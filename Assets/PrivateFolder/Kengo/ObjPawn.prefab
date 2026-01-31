@@ -124,6 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ea94df2fef3f7f48b4a1badc87dcc60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useRandomStart: 0
+  startAsGood: 0
   clicked: 0
 --- !u!114 &1794082338982688108
 MonoBehaviour:
@@ -149,9 +151,9 @@ GameObject:
   - component: {fileID: 1340826519972480510}
   - component: {fileID: 8939184120656026055}
   - component: {fileID: 6977488798666560063}
-  - component: {fileID: 1922446199574714833}
   - component: {fileID: -5828391268135750113}
   - component: {fileID: -1447324566524010668}
+  - component: {fileID: 2816981454856884938}
   m_Layer: 3
   m_Name: ObjPawn
   m_TagString: Untagged
@@ -216,19 +218,8 @@ MonoBehaviour:
   - Target3
   - Target4
   switchInterval: 10
---- !u!114 &1922446199574714833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5590684745239292538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ea94df2fef3f7f48b4a1badc87dcc60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clicked: 0
+  minSpeed: 1
+  maxSpeed: 5
 --- !u!114 &-5828391268135750113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,6 +278,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2816981454856884938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5590684745239292538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 088e57050b424ed48a7f66136cf16165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goodColor: {r: 1, g: 0, b: 0, a: 1}
+  badColor: {r: 0, g: 0, b: 1, a: 1}
 --- !u!1001 &9202727911477791078
 PrefabInstance:
   m_ObjectHideFlags: 0

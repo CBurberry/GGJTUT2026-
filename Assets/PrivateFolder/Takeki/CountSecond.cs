@@ -24,7 +24,9 @@ public class CountSecond : MonoBehaviour
     void Start()
     {
         // ŽžŠÔ‚ðŽ~‚ß‚é
+        Debug.Log("Start Called");
         Time.timeScale = 0f;
+        Debug.Log("Start Called");
     }
     public void OnStartREC()
     {
