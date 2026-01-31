@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    private SoundManager Instance;
-    //public AudioSource source1;
-    //public AudioClip clip1;
+    public static SoundManager Instance;
+
+    public float AudioVol = 1.0f;
 
     private void Awake()
     {
@@ -25,11 +25,11 @@ public class SoundManager : MonoBehaviour
 
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Space)) PlaySE(source1);
     }
 
     public void PlaySE(AudioSource source, AudioClip clip = null)
     {
+        source.volume = AudioVol;
         if (clip != null)
             source.PlayOneShot(clip);
         else source.PlayOneShot(source.clip);
@@ -41,4 +41,6 @@ public class SoundManager : MonoBehaviour
             source.clip = clip;
         else source.Play();
     }
+
+
 }
