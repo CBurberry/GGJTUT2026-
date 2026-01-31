@@ -7,8 +7,8 @@ public class BroadcastColorView : MonoBehaviour
     private ObjClickJudge judge;
 
     [Header("表示色")]
-    public Color goodColor = Color.red;
-    public Color badColor = Color.blue;
+    public Color goodColor = Color.blue;  // 良い放送は青
+    public Color badColor = Color.red;    // 悪い放送は赤
 
     void Awake()
     {
@@ -22,7 +22,10 @@ public class BroadcastColorView : MonoBehaviour
             return;
         }
 
-        // 初期状態反映
+        // マテリアルをインスタンス化して色を安全に変えられるようにする
+        rend.material = new Material(rend.material);
+
+        // 初期状態を反映
         UpdateColor();
     }
 
@@ -44,6 +47,11 @@ public class BroadcastColorView : MonoBehaviour
 
     private void UpdateColor()
     {
-        rend.material.color = judge.IsGoodBroadcasting ? goodColor : badColor;
+        if (judge == null || rend == null) return;
+
+        Color targetColor = judge.IsGoodBroadcasting ? goodColor : badColor;
+        rend.material.color = targetColor;
+
+        Debug.Log($"{name} UpdateColor: IsGoodBroadcasting={judge.IsGoodBroadcasting}, color={targetColor}");
     }
 }
