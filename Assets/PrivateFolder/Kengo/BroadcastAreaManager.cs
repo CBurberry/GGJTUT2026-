@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using TMPro;
 
-public class RedObjectAreaScoreMulti : MonoBehaviour
+public class BroadcastAreaManager : MonoBehaviour
 {
     [Header("UI枠")]
     public RectTransform areaRect;
 
     [Header("対象3Dオブジェクト")]
-    public ClickToRed3D[] targets;
+    public ObjClickJudge[] targets;
 
     [Header("スコア表示")]
     public TextMeshProUGUI scoreText;
@@ -30,8 +30,8 @@ public class RedObjectAreaScoreMulti : MonoBehaviour
     {
         if (areaRect == null || scoreText == null) return;
 
-        // targets 配列だけでなく、シーン上の ClickToRed3D を全て取得してループ
-        ClickToRed3D[] allTargets = GameObject.FindObjectsOfType<ClickToRed3D>();
+        // targets 配列だけでなく、シーン上の ObjClickJudge を全て取得してループ
+        ObjClickJudge[] allTargets = GameObject.FindObjectsByType<ObjClickJudge>(FindObjectsSortMode.None);
 
         foreach (var target in allTargets)
         {
@@ -40,7 +40,7 @@ public class RedObjectAreaScoreMulti : MonoBehaviour
             if (IsInsideUI(target.transform.position))
             {
                 // ここで赤かどうかをチェック
-                if (target.IsRed)
+                if (target.IsClicked)
                 {
                     score += deltaPerFrame;
                     Debug.Log(target.name + " 枠内：赤 → +");
