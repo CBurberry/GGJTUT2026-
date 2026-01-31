@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b0db6b1309ac6244854380e7cf4f436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MosaicLayer: 8
+  MosaicLayer: 9
   MosaicBlocks: 20
   ShadowsCastOnMosaic: 1
   HighResolutionRender: 1
@@ -162,6 +162,3 @@ MonoBehaviour:
   MosaicBlocks: 220
   ScaleControl: 0
   MosaixComponent: {fileID: 8383095213474619934}
-  SphereMask: {fileID: 0}
-  SphereMaskStart: {fileID: 0}
-  SphereMaskEnd: {fileID: 0}
