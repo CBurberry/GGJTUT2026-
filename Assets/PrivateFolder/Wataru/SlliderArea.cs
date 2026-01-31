@@ -24,4 +24,8 @@ public class SlliderArea : MonoBehaviour
             slider.value = Mathf.Clamp(slider.value, slider.minValue, slider.maxValue);
         }
     }
+    public void Score_Slider_controller(float score)
+    {
+        slider.value += score;
+    }
 }
