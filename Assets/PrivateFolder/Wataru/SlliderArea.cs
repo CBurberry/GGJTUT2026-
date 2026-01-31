@@ -26,6 +26,6 @@ public class SlliderArea : MonoBehaviour
     }
     public void Score_Slider_controller(float score)
     {
-        slider.value += score;
+        slider.value = score;
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 public class ScereTranslateManager : MonoBehaviour
 {
     [SerializeField] private BroadcastAreaManager broadcastAreaManager;
-    [SerializeField] private SliderArea sliderArea;
+    [SerializeField] private SlliderArea slliderArea;
     [SerializeField] private GameManager gameManager;
 
     public float score;
@@ -16,8 +16,8 @@ public class ScereTranslateManager : MonoBehaviour
 
     void Update()
     {
-        score = 50 + broadcastAreaManager.score / 100;
-        //sliderArea.(broadcastAreaManager.score);
+        score = 50 + broadcastAreaManager.score / 200;
+        slliderArea.Score_Slider_controller(score);
     }
 
 }
