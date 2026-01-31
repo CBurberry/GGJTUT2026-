@@ -21,6 +21,10 @@ namespace Invector.vCharacterController
         [HideInInspector] public vThirdPersonCamera tpCamera;
         [HideInInspector] public Camera cameraMain;
 
+        //Hacky animation input override
+        public bool UseVelocityInput;
+        public Vector3 Velocity;
+
         #endregion
 
         protected virtual void Start()
@@ -83,8 +87,17 @@ namespace Invector.vCharacterController
 
         public virtual void MoveInput()
         {
-            cc.input.x = Input.GetAxis(horizontalInput);
-            cc.input.z = Input.GetAxis(verticallInput);
+            if (UseVelocityInput)
+            {
+                var normalised = Velocity.normalized;
+                cc.input.x = normalised.x;
+                cc.input.z = normalised.z;
+            }
+            else 
+            {
+                cc.input.x = Input.GetAxis(horizontalInput);
+                cc.input.z = Input.GetAxis(verticallInput);
+            }
         }
 
         protected virtual void CameraInput()
@@ -115,16 +128,20 @@ namespace Invector.vCharacterController
 
         protected virtual void StrafeInput()
         {
-            if (Input.GetKeyDown(strafeInput))
-                cc.Strafe();
+            return;
+
+            /*if (Input.GetKeyDown(strafeInput))
+                cc.Strafe();*/
         }
 
         protected virtual void SprintInput()
         {
-            if (Input.GetKeyDown(sprintInput))
+            cc.Sprint(false);
+
+            /*if (Input.GetKeyDown(sprintInput))
                 cc.Sprint(true);
             else if (Input.GetKeyUp(sprintInput))
-                cc.Sprint(false);
+                cc.Sprint(false);*/
         }
 
         /// <summary>
@@ -141,8 +158,10 @@ namespace Invector.vCharacterController
         /// </summary>
         protected virtual void JumpInput()
         {
-            if (Input.GetKeyDown(jumpInput) && JumpConditions())
-                cc.Jump();
+            return;
+
+            /*if (Input.GetKeyDown(jumpInput) && JumpConditions())
+                cc.Jump();*/
         }
 
         #endregion       

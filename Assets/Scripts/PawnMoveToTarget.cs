@@ -1,3 +1,4 @@
+using Invector.vCharacterController;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -6,6 +7,9 @@ public class PawnMoveToTarget : MonoBehaviour
 {
     public Transform Target;
     private NavMeshAgent agent;
+
+    [SerializeField]
+    private vThirdPersonInput input;
 
     private void Start()
     {
@@ -19,9 +23,13 @@ public class PawnMoveToTarget : MonoBehaviour
             return;
         }
 
+        if (input != null) 
+        {
+            input.Velocity = agent.velocity;
+        }
+
         if (Mathf.Abs(Vector3.Distance(transform.position, Target.position)) > 0.1f)
         {
-            Debug.Log("Setting Destination to: " + transform.position);
             agent.SetDestination(Target.position);
         }
     }
