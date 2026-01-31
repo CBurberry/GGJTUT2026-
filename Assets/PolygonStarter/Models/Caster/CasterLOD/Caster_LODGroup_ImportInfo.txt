@@ -1,5 +1,5 @@
 logType=HighQuality
-generation=GameBase
+generation=Unknown
 isLOD=true
 qualEyes=Parallax
 qualHair=TwoPass

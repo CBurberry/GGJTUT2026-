@@ -17,8 +17,7 @@ public class BroadcastAreaManager : MonoBehaviour
 
     public int score = 0;
 
-    // ↓ Inspectorで確認できるデバッグ用カウント
-    [Header("デバッグ用カウント")]
+    // ほかのスクリプトでしっかり参照する数値
     public int insideCount = 0;
     public int plusCount = 0;
     public int minusCount = 0;
@@ -26,7 +25,6 @@ public class BroadcastAreaManager : MonoBehaviour
     void Start()
     {
         if (areaRect == null) Debug.LogError("areaRect が未設定！");
-        if (targets == null || targets.Length == 0) Debug.LogError("targets が未設定！");
         if (scoreText == null) Debug.LogError("scoreText が未設定！");
 
         UpdateScoreText();
@@ -36,39 +34,71 @@ public class BroadcastAreaManager : MonoBehaviour
     {
         if (areaRect == null || scoreText == null) return;
 
-        // デバッグカウントリセット
+        // カウントリセット
         insideCount = 0;
         plusCount = 0;
         minusCount = 0;
 
-        // targets 配列だけでなく、シーン上の ObjClickJudge を全て取得してループ
-        ObjClickJudge[] allTargets = GameObject.FindObjectsByType<ObjClickJudge>(FindObjectsSortMode.None);
+        ObjClickJudge[] allTargets =
+            GameObject.FindObjectsByType<ObjClickJudge>(FindObjectsSortMode.None);
 
         foreach (var target in allTargets)
         {
             if (target == null) continue;
 
-            if (IsInsideUI(target.transform.position))
+            Renderer rend = target.GetComponent<Renderer>();
+            if (rend == null) continue;
+
+            if (IsRendererInsideUI(rend))
             {
                 insideCount++;
 
-                // ここで赤かどうかをチェック
-                if (target.IsClicked)
-                {
-                    score += deltaPerFrame;
-                    plusCount++;
-                    //Debug.Log(target.name + " 枠内：赤 → +");
-                }
+                if (!target.IsGoodBroadcasting)
+                    minusCount++;  // 青 → 減点
                 else
-                {
-                    score -= deltaPerFrame;
-                    minusCount++;
-                    //Debug.Log(target.name + " 枠内：赤以外 → -");
-                }
+                    plusCount++;   // 赤 → 加点
             }
         }
 
+        // ★ 計算式のみ変更（1フレームでの過剰増減を防ぐ）
+        score += plusCount;
+        score -= minusCount;
+
         UpdateScoreText();
+    }
+
+    // ★ 見た目どおりに判定する（遠距離対応）
+    private bool IsRendererInsideUI(Renderer rend)
+    {
+        Camera cam = Camera.main;
+        if (cam == null) return false;
+
+        Bounds b = rend.bounds;
+
+        // ① 中心点（遠くて小さい物用）
+        if (IsInsideUI(b.center))
+            return true;
+
+        // ② boundsの8頂点（近くて大きい物用）
+        Vector3[] points =
+        {
+            b.min,
+            b.max,
+            new Vector3(b.min.x, b.min.y, b.max.z),
+            new Vector3(b.min.x, b.max.y, b.min.z),
+            new Vector3(b.max.x, b.min.y, b.min.z),
+            new Vector3(b.min.x, b.max.y, b.max.z),
+            new Vector3(b.max.x, b.min.y, b.max.z),
+            new Vector3(b.max.x, b.max.y, b.min.z)
+        };
+
+        foreach (var p in points)
+        {
+            if (IsInsideUI(p))
+                return true;
+        }
+
+        return false;
     }
 
     private bool IsInsideUI(Vector3 worldPos)

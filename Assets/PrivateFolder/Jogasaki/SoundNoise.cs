@@ -5,20 +5,22 @@ public class SoundNoise : MonoBehaviour
 {
     public int outObjNum;
 
-    [SerializeField] private float NoiseVol = -80.0f;
+    [SerializeField] private float NoiseVol;
+    [SerializeField,Header("èâä˙íl")] private float initialValue;
+    [SerializeField, Header("ëùâ¡ó¶")] private float minusNum;
     [SerializeField] private AudioMixer audioMixer;
 
     [SerializeField] private BroadcastAreaManager BroadcastAreaManager;
 
     public AudioSource audioSource;
-    private bool isNoise;
 
     void Start()
     {
+        NoiseVol = initialValue;
         audioSource.Play();
-        if(BroadcastAreaManager == null)
+        if (BroadcastAreaManager == null)
         {
-            GameObject gameObject = GameObject.Find("");
+            GameObject gameObject = GameObject.Find("Canvas");
             BroadcastAreaManager = gameObject.GetComponent<BroadcastAreaManager>();
         }
     }
@@ -33,8 +35,8 @@ public class SoundNoise : MonoBehaviour
 
     public void NoiseVolume(int num)
     {
-        if (NoiseVol < 0.0f) NoiseVol = -80f + 25.0f * num;
-        SoundManager.Instance.AudioVol = 1.0f - NoiseVol;
+        if (initialValue + minusNum * num < 0.0f) NoiseVol = initialValue + minusNum * num;
+        else if (initialValue + minusNum * num >= 0.0f) NoiseVol = 0f;
     }
 
 }
