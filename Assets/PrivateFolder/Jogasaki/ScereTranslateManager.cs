@@ -6,7 +6,7 @@ public class ScereTranslateManager : MonoBehaviour
     [SerializeField] private SliderArea sliderArea;
     [SerializeField] private GameManager gameManager;
 
-    private float score;
+    public float score;
 
 
     void Start()
@@ -16,8 +16,8 @@ public class ScereTranslateManager : MonoBehaviour
 
     void Update()
     {
+        score = 50 + broadcastAreaManager.score / 100;
         //sliderArea.(broadcastAreaManager.score);
     }
-    //gameManager.(broadcastAreaManager.score)
 
 }

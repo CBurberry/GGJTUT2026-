@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private ScereTranslateManager scoreTranslateManager;
+
     [Header("--- 制限時間と視聴率 ---")]
     public float timeLimit = 60f;
     public float currentRating = 50f;
@@ -30,7 +32,7 @@ public class GameManager : MonoBehaviour
         if (isFinished) return;
 
         timeLimit -= Time.deltaTime;
-        currentRating -= Time.deltaTime; // テスト用
+        //currentRating -= Time.deltaTime; // テスト用
         UpdateTimerUI();
 
         if (currentRating <= 0) GameOver();
@@ -54,18 +56,18 @@ public class GameManager : MonoBehaviour
         if (gameOverPanel != null) gameOverPanel.SetActive(true);
     }
 
-    void GameClear()
+    public void GameClear()
     {
         if (isFinished) return;
         isFinished = true;
         Time.timeScale = 0f;
 
-        PlayerPrefs.SetFloat("LatestRating", currentRating);
+        PlayerPrefs.SetFloat("LatestRating", scoreTranslateManager.score);
         PlayerPrefs.Save();
 
         if (scoreText != null)
         {
-            scoreText.text = currentRating.ToString("F1") + " %";
+            scoreText.text = scoreTranslateManager.score.ToString("F1") + " %";
         }
 
         if (timeText != null) timeText.gameObject.SetActive(false);
