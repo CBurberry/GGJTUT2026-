@@ -38,6 +38,9 @@ namespace Invector.vCharacterController
         public virtual void SetAnimatorMoveSpeed(vMovementSpeed speed)
         {
             Vector3 relativeInput = transform.InverseTransformDirection(moveDirection);
+
+            Debug.Log("Relative Input: " + relativeInput);
+
             verticalSpeed = relativeInput.z;
             horizontalSpeed = relativeInput.x;
 

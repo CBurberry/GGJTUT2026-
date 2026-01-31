@@ -182,7 +182,9 @@ namespace Invector.vCharacterController
 
             bool useVerticalVelocity = true;
             if (useVerticalVelocity) targetVelocity.y = _rigidbody.linearVelocity.y;
-            _rigidbody.linearVelocity = targetVelocity;
+            {
+                //_rigidbody.linearVelocity = targetVelocity;
+            }
         }
 
         public virtual void CheckSlopeLimit()
@@ -228,7 +230,7 @@ namespace Invector.vCharacterController
             direction.y = 0f;
             Vector3 desiredForward = Vector3.RotateTowards(transform.forward, direction.normalized, rotationSpeed * Time.deltaTime, .1f);
             Quaternion _newRotation = Quaternion.LookRotation(desiredForward);
-            transform.rotation = _newRotation;
+            //transform.rotation = _newRotation;
         }
 
         #endregion
