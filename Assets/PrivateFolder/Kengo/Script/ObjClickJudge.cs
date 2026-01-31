@@ -45,6 +45,8 @@ public class ObjClickJudge : MonoBehaviour
         IsGoodBroadcasting = !IsGoodBroadcasting;
         clicked = true;
 
+        SoundManager.Instance.PlayMaskSound();
+
         Debug.Log($"{name} Clicked: IsGoodBroadcasting = {IsGoodBroadcasting}");
 
         showMask.ShowChild();
