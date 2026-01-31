@@ -7,7 +7,7 @@ public class SoundTestSc : MonoBehaviour
 
     void Start()
     {
-        
+        //
     }
 
     void Update()
