@@ -1,11 +1,14 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SoundNoise : MonoBehaviour
 {
     public int outObjNum;
 
-    [SerializeField] private float NoiseVol = 0.0f;
+    [SerializeField] private float NoiseVol = -80.0f;
+    [SerializeField] private AudioMixer audioMixer;
 
+    [SerializeField] private BroadcastAreaManager BroadcastAreaManager;
 
     public AudioSource audioSource;
     private bool isNoise;
@@ -13,20 +16,24 @@ public class SoundNoise : MonoBehaviour
     void Start()
     {
         audioSource.Play();
+        if(BroadcastAreaManager == null)
+        {
+            GameObject gameObject = GameObject.Find("");
+            BroadcastAreaManager = gameObject.GetComponent<BroadcastAreaManager>();
+        }
     }
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.K)) isNoise = true;
-        else isNoise = false;
-        NoiseVolume(isNoise);
-        audioSource.volume = NoiseVol;
+        //if (Input.GetKey(KeyCode.K)) isNoise = true;
+        //else isNoise = false;
+        NoiseVolume(BroadcastAreaManager.minusCount);
+        audioMixer.SetFloat("NoiseVolume", NoiseVol);
     }
 
-    public void NoiseVolume(bool isin)
+    public void NoiseVolume(int num)
     {
-        if (isin) NoiseVol = 0.5f;
-        else NoiseVol = 0.0f;
+        if (NoiseVol < 0.0f) NoiseVol = -80f + 25.0f * num;
         SoundManager.Instance.AudioVol = 1.0f - NoiseVol;
     }
 
