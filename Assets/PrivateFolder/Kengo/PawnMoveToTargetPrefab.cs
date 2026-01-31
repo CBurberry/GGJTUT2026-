@@ -38,7 +38,7 @@ public class PawnMoveToTargetPrefab : MonoBehaviour
         float distance = Vector3.Distance(transform.position, Target.position);
         if (distance > 0.1f)
         {
-            Debug.Log("Setting Destination to: " + Target.position);
+            //Debug.Log("Setting Destination to: " + Target.position);
             agent.SetDestination(Target.position);
         }
     }
