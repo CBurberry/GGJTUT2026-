@@ -25,7 +25,7 @@ public class ObjClickJudge : MonoBehaviour
         // š ‰Šúó‘ÔŒˆ’è
         if (useRandomStart)
         {
-            IsGoodBroadcasting = UnityEngine.Random.value > 0.8f;
+            IsGoodBroadcasting = UnityEngine.Random.value > 0.5f;
         }
         else
         {
