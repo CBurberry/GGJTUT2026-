@@ -2,15 +2,22 @@ using UnityEngine;
 
 public class ScereTranslateManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private BroadcastAreaManager broadcastAreaManager;
+    [SerializeField] private SliderArea sliderArea;
+    [SerializeField] private GameManager gameManager;
+
+    private float score;
+
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        //sliderArea.(broadcastAreaManager.score);
     }
+    //gameManager.(broadcastAreaManager.score)
+
 }
