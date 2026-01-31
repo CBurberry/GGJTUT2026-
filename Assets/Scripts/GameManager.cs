@@ -1,102 +1,82 @@
 using UnityEngine;
-using UnityEngine.UI; 
-using UnityEngine.SceneManagement; 
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [Header("制限時間と視聴率 ")]
-    public float timeLimit = 60f;      // 制限時間
-    public float currentRating = 50f;  // 現在の視聴率
+    [Header("--- 制限時間と視聴率 ---")]
+    public float timeLimit = 60f;
+    public float currentRating = 50f;
 
-    [Header("UI設定")]
-    public GameObject gameOverPanel;   
-    public GameObject gameClearPanel;  
+    [Header("--- UI設定 ---")]
+    public GameObject gameOverPanel;
+    public GameObject gameClearPanel;
+    public TextMeshProUGUI timeText;   
+    public TextMeshProUGUI scoreText;  
 
-    private bool isFinished = false;   
+    private bool isFinished = false;
 
     void Start()
     {
-      
         Time.timeScale = 1f;
-
-      
         if (gameOverPanel != null) gameOverPanel.SetActive(false);
         if (gameClearPanel != null) gameClearPanel.SetActive(false);
+        if (timeText != null) timeText.gameObject.SetActive(true);
+        UpdateTimerUI();
     }
 
     void Update()
     {
-        
         if (isFinished) return;
 
-        //  カウントダウン
         timeLimit -= Time.deltaTime;
+        currentRating -= Time.deltaTime; // テスト用
+        UpdateTimerUI();
 
-      
-        
-        if (currentRating <= 0)
+        if (currentRating <= 0) GameOver();
+        else if (timeLimit <= 0) GameClear();
+    }
+
+    void UpdateTimerUI()
+    {
+        if (timeText != null)
         {
-            GameOver();
-        }
-        else if (timeLimit <= 0)
-        {
-            GameClear();
+            timeText.text = Mathf.CeilToInt(Mathf.Max(0, timeLimit)).ToString();
         }
     }
 
-    // ゲームオーバー
     void GameOver()
     {
+        if (isFinished) return;
         isFinished = true;
-        currentRating = 0; 
-
-        // 時間を止める
         Time.timeScale = 0f;
-
-        // パネルを表示
-        if (gameOverPanel != null)
-        {
-            gameOverPanel.SetActive(true);
-        }
-
-        Debug.Log("【判定】ゲームオーバー：放送事故が発生しました。");
+        if (timeText != null) timeText.gameObject.SetActive(false);
+        if (gameOverPanel != null) gameOverPanel.SetActive(true);
     }
 
-  
     void GameClear()
     {
+        if (isFinished) return;
         isFinished = true;
-
-        //時間を止める
         Time.timeScale = 0f;
 
-        // スコア（視聴率）を保存
         PlayerPrefs.SetFloat("LatestRating", currentRating);
-        PlayerPrefs.Save(); 
+        PlayerPrefs.Save();
 
-        // クリアパネルを表示
-        if (gameClearPanel != null)
+        if (scoreText != null)
         {
-            gameClearPanel.SetActive(true);
+            scoreText.text = currentRating.ToString("F1") + " %";
         }
 
-        Debug.Log("【判定】クリア！ 視聴率 " + currentRating + "% を保存 ");
+        if (timeText != null) timeText.gameObject.SetActive(false);
+        if (gameClearPanel != null) gameClearPanel.SetActive(true);
     }
 
-    // リトライ
     public void RetryGame()
     {
+        Time.timeScale = 1f;
         
-        Time.timeScale = 1f;
-
-        string currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(currentSceneName);
-    }
-
-    // ボタン
-    public void GoToNextScene(string sceneName)
-    {
-        Time.timeScale = 1f;
+        string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
 }
