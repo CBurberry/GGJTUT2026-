@@ -18,9 +18,7 @@ public class ScereTranslateManager : MonoBehaviour
  
     void Update()
     {
-<<<<<<< HEAD
         score = 50f + broadcastAreaManager.score / 200f;
-=======
         float targetScore = 50f + broadcastAreaManager.score / 100f;
 
         float smoothTime = 0.25f;
@@ -39,7 +37,6 @@ public class ScereTranslateManager : MonoBehaviour
             next = Mathf.Max(next, score - maxDownDelta);
         }
         score = next;
->>>>>>> wataru004
         slliderArea.Score_Slider_controller(score);
     }
 
