@@ -127,7 +127,7 @@ SubShader {
 
                     if (index != 0) 
                     {
-                        combinedMask = max(sphereMaskArray[index-1], sphereMaskArray[index]);
+                        combinedMask = max(combinedMask, sphereMaskArray[index]);
                     }
                     else 
                     {
@@ -135,7 +135,7 @@ SubShader {
                     }
                 }
 
-                f *= max(sphereMaskArray[0], max(sphereMaskArray[1], sphereMaskArray[2]));
+                f *= combinedMask;
             }
 #endif
 
