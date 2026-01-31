@@ -11,4 +11,7 @@ public class SliderValueText:MonoBehaviour
     {
         valueText.text = slider.value.ToString("0"); 
     }
+
+
+
 }
