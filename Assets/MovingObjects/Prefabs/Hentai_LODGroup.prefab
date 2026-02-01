@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hentai_LODGroup
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 3d5b9ea5a9bf65c4ab61fa2970585689, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4b10ff48a92b7c04dad32ce96e786323, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
