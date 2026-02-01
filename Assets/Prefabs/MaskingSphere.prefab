@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2261749428841483539}
   - component: {fileID: 3638339891316667701}
   - component: {fileID: 4557124717273798824}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MaskingSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ MeshRenderer:
   m_GameObject: {fileID: 7813237624102657052}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
