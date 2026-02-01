@@ -51,7 +51,7 @@ public class SoundManager : MonoBehaviour
 
     public void PlayBGM(AudioSource source, AudioClip clip = null)
     {
-        bgmSource.Play();
+        bgmSource?.Play();
     }
 
 
