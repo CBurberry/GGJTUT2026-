@@ -21,6 +21,10 @@ public class CountSecond : MonoBehaviour
 
     private Coroutine _countdownCoroutine;
 
+    //Sound
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip[] audioClip;
+
     void Start()
     {
         // 時間を止める
@@ -37,6 +41,8 @@ public class CountSecond : MonoBehaviour
 
     private IEnumerator CountdownRoutine()
     {
+        SoundManager.Instance.PlaySE(audioSource, audioClip[0]);
+
         int currentCount = countdownValue;
         StartButton.SetActive(false);
         countText.gameObject.SetActive(true);
@@ -44,6 +50,10 @@ public class CountSecond : MonoBehaviour
         while (currentCount > 0)
         {
             countText.text = currentCount.ToString();
+
+            if (currentCount == 3) SoundManager.Instance.PlaySE(audioSource, audioClip[1]);
+            else if (currentCount == 2) SoundManager.Instance.PlaySE(audioSource, audioClip[2]);
+
 
             // 演出（AnimateTextもunscaledTimeで動くように修正）
             yield return StartCoroutine(AnimateText());
@@ -65,10 +75,11 @@ public class CountSecond : MonoBehaviour
 
     public void StartREC()
     {
+        SoundManager.Instance.PlaySE(audioSource, audioClip[3]);
+        SoundManager.Instance.PlaySE(audioSource, audioClip[4]);
         Time.timeScale = 1f; // 時間を再開
         countImage.gameObject.SetActive(false);
         countText.gameObject.SetActive(false);
-
         Debug.Log("Recording Started and Time Resumed!");
     }
 
