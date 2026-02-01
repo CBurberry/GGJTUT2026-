@@ -25,6 +25,8 @@ public class CountSecond : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip[] audioClip;
 
+    [SerializeField] private AudioSource bgmSource;
+
     void Start()
     {
         // 時間を止める
@@ -67,6 +69,7 @@ public class CountSecond : MonoBehaviour
         countText.gameObject.SetActive(false);
         SoundManager.Instance.PlaySE(audioSource, audioClip[3]);
         SoundManager.Instance.PlaySE(audioSource, audioClip[4]);
+        SoundManager.Instance.PlayBGM(bgmSource);
 
         // 指定した秒数（実時間）待機
         yield return new WaitForSecondsRealtime(countFinishDisplayTime);

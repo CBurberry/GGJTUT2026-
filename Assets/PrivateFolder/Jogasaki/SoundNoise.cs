@@ -14,6 +14,10 @@ public class SoundNoise : MonoBehaviour
 
     public AudioSource audioSource;
 
+    private void Awake()
+    {
+        NoiseVol = initialValue;
+    }
     void Start()
     {
         NoiseVol = initialValue;
