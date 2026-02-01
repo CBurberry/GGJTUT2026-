@@ -79,12 +79,12 @@ public class GameManager : MonoBehaviour
         if (isFinished) return;
         isFinished = true;
 
-
-        float score = scoreTranslateManager.score;
+        float score = 0;
+        score= scoreTranslateManager.score;
         PlayerPrefs.SetFloat("LatestRating", score);
         PlayerPrefs.Save();
 
-
+        scoreText.text = score.ToString("F1") + "%";
         if (rankAPanel != null) rankAPanel.SetActive(false);
         if (rankBPanel != null) rankBPanel.SetActive(false);
         if (rankCPanel != null) rankCPanel.SetActive(false);
