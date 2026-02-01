@@ -9,8 +9,6 @@ public class BroadcastAreaManager : MonoBehaviour
     [Header("対象3Dオブジェクト")]
     public ObjClickJudge[] targets;
 
-    [Header("スコア表示")]
-    public TextMeshProUGUI scoreText;
 
     [Header("増減量")]
     public int deltaPerFrame = 1;
@@ -25,14 +23,11 @@ public class BroadcastAreaManager : MonoBehaviour
     void Start()
     {
         if (areaRect == null) Debug.LogError("areaRect が未設定！");
-        if (scoreText == null) Debug.LogError("scoreText が未設定！");
 
-        UpdateScoreText();
     }
 
     void Update()
     {
-        if (areaRect == null || scoreText == null) return;
 
         // カウントリセット
         insideCount = 0;
@@ -64,7 +59,6 @@ public class BroadcastAreaManager : MonoBehaviour
         score += plusCount;
         score -= minusCount;
 
-        UpdateScoreText();
     }
 
     // ★ 見た目どおりに判定する（遠距離対応）
@@ -118,8 +112,4 @@ public class BroadcastAreaManager : MonoBehaviour
                screenPos.y >= min.y && screenPos.y <= max.y;
     }
 
-    private void UpdateScoreText()
-    {
-        scoreText.text = score.ToString();
-    }
 }
