@@ -56,8 +56,8 @@ public class BroadcastAreaManager : MonoBehaviour
         }
 
         // ★ 計算式のみ変更（1フレームでの過剰増減を防ぐ）
-        score += plusCount;
-        score -= minusCount;
+        score += plusCount*3;
+        score -= minusCount*6;
 
     }
 
