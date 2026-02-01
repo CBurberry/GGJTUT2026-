@@ -69,7 +69,7 @@ public class CountSecond : MonoBehaviour
         countText.gameObject.SetActive(false);
         SoundManager.Instance.PlaySE(audioSource, audioClip[3]);
         SoundManager.Instance.PlaySE(audioSource, audioClip[4]);
-        SoundManager.Instance.PlayBGM(bgmSource);
+        SoundManager.Instance.bgmSource.Play();
 
         // 指定した秒数（実時間）待機
         yield return new WaitForSecondsRealtime(countFinishDisplayTime);

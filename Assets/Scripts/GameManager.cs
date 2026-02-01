@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -26,6 +27,10 @@ public class GameManager : MonoBehaviour
     public GameObject rankAPanel;
     public GameObject rankBPanel;
     public GameObject rankCPanel;
+
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip[] audioClips;
+
 
     void Start()
     {
@@ -93,14 +98,19 @@ public class GameManager : MonoBehaviour
         if (score >= 80f)
         {
             if (rankAPanel != null) rankAPanel.SetActive(true);
+            StartCoroutine(playsound(0));
+
         }
         else if (score >= 50f)
         {
             if (rankBPanel != null) rankBPanel.SetActive(true);
+            StartCoroutine(playsound(1));
+
         }
         else
         {
             if (rankCPanel != null) rankCPanel.SetActive(true);
+            StartCoroutine(playsound(2));
         }
 
 
@@ -112,5 +122,13 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    private IEnumerator playsound(int num)
+    {
+        SoundManager.Instance.bgmSource.Stop();
+        SoundManager.Instance.audioSource.Stop();
+        yield return new WaitForSecondsRealtime(0.5f);
+        SoundManager.Instance.PlaySE(audioSource, audioClips[num]);
     }
 }

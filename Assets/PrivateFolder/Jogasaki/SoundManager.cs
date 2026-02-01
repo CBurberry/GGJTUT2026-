@@ -6,6 +6,9 @@ public class SoundManager : MonoBehaviour
     public static SoundManager Instance;
 
     public AudioSource audioSource;
+
+    public AudioSource bgmSource;
+
     //public int poolSize;
     //private List<AudioSource> pool = new List<AudioSource>();
 
@@ -48,10 +51,9 @@ public class SoundManager : MonoBehaviour
 
     public void PlayBGM(AudioSource source, AudioClip clip = null)
     {
-        if (clip != null)
-            source.clip = clip;
-        else source.Play();
+        bgmSource.Play();
     }
+
 
     public void PlayMaskSound()
     {

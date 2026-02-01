@@ -17,6 +17,7 @@ public class SoundNoise : MonoBehaviour
     private void Awake()
     {
         NoiseVol = initialValue;
+        audioMixer.SetFloat("NoiseVolume", NoiseVol);
     }
     void Start()
     {
