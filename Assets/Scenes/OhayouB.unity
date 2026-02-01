@@ -512,6 +512,18 @@ MonoBehaviour:
     - prefab: {fileID: 4374470491221475434, guid: 573b5bca48a18b7439d1824899711414, type: 3}
       probability: 10
       customInterval: -1
+    - prefab: {fileID: 4374470491221475434, guid: 573b5bca48a18b7439d1824899711414, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 2169196137032298423, guid: 2ec633ebf78ecca4b8f8f0ada14eb2b7, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 4943254233069669130, guid: f139cdee98b8766489b2fbc0167e94d5, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 4794562291188510264, guid: 2e0272ae380d2494fbca71a931102b8f, type: 3}
+      probability: 10
+      customInterval: -1
     defaultInterval: -1
   - duration: 10
     spawnPrefabs:
@@ -537,6 +549,15 @@ MonoBehaviour:
       probability: 10
       customInterval: -1
     - prefab: {fileID: 8744458543860457040, guid: 317f6208f4542aa479f5aa6d5711b23e, type: 3}
+      probability: 10
+      customInterval: 0.1
+    - prefab: {fileID: 4911758096820129495, guid: 3ee4457a002e6b948afe24e0d2cbee31, type: 3}
+      probability: 10
+      customInterval: 0.1
+    - prefab: {fileID: 4943254233069669130, guid: f139cdee98b8766489b2fbc0167e94d5, type: 3}
+      probability: 10
+      customInterval: 0.1
+    - prefab: {fileID: 2169196137032298423, guid: 2ec633ebf78ecca4b8f8f0ada14eb2b7, type: 3}
       probability: 10
       customInterval: 0.1
     defaultInterval: -1
@@ -636,6 +657,21 @@ MonoBehaviour:
       probability: 20
       customInterval: -1
     - prefab: {fileID: 4403407976201347589, guid: 9495780d9a4a46b4e98eba0f46003451, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 4794562291188510264, guid: 2e0272ae380d2494fbca71a931102b8f, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 8009722268163849573, guid: ac79cfcec09106f4d9aa4154e6b2fbbc, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 2169196137032298423, guid: 2ec633ebf78ecca4b8f8f0ada14eb2b7, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 4911758096820129495, guid: 3ee4457a002e6b948afe24e0d2cbee31, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 3619442861628317704, guid: d54cb821cf71a5f4692f1c6620487a65, type: 3}
       probability: 10
       customInterval: -1
     defaultInterval: 1
@@ -771,6 +807,18 @@ MonoBehaviour:
     - prefab: {fileID: 4374470491221475434, guid: 573b5bca48a18b7439d1824899711414, type: 3}
       probability: 10
       customInterval: -1
+    - prefab: {fileID: 4374470491221475434, guid: 573b5bca48a18b7439d1824899711414, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 2169196137032298423, guid: 2ec633ebf78ecca4b8f8f0ada14eb2b7, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 4943254233069669130, guid: f139cdee98b8766489b2fbc0167e94d5, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 4794562291188510264, guid: 2e0272ae380d2494fbca71a931102b8f, type: 3}
+      probability: 10
+      customInterval: -1
     defaultInterval: -1
   - duration: 10
     spawnPrefabs:
@@ -796,6 +844,15 @@ MonoBehaviour:
       probability: 10
       customInterval: -1
     - prefab: {fileID: 8744458543860457040, guid: 317f6208f4542aa479f5aa6d5711b23e, type: 3}
+      probability: 10
+      customInterval: 0.1
+    - prefab: {fileID: 4911758096820129495, guid: 3ee4457a002e6b948afe24e0d2cbee31, type: 3}
+      probability: 10
+      customInterval: 0.1
+    - prefab: {fileID: 4943254233069669130, guid: f139cdee98b8766489b2fbc0167e94d5, type: 3}
+      probability: 10
+      customInterval: 0.1
+    - prefab: {fileID: 2169196137032298423, guid: 2ec633ebf78ecca4b8f8f0ada14eb2b7, type: 3}
       probability: 10
       customInterval: 0.1
     defaultInterval: -1
@@ -895,6 +952,21 @@ MonoBehaviour:
       probability: 20
       customInterval: -1
     - prefab: {fileID: 4403407976201347589, guid: 9495780d9a4a46b4e98eba0f46003451, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 4794562291188510264, guid: 2e0272ae380d2494fbca71a931102b8f, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 8009722268163849573, guid: ac79cfcec09106f4d9aa4154e6b2fbbc, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 2169196137032298423, guid: 2ec633ebf78ecca4b8f8f0ada14eb2b7, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 4911758096820129495, guid: 3ee4457a002e6b948afe24e0d2cbee31, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 3619442861628317704, guid: d54cb821cf71a5f4692f1c6620487a65, type: 3}
       probability: 10
       customInterval: -1
     defaultInterval: 1
