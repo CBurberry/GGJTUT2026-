@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     private bool isFinished = false;
 
     [Header("--- ƒ‰ƒ“ƒN•Êƒpƒlƒ‹ ---")]
+    public GameObject rankSPanel;
     public GameObject rankAPanel;
     public GameObject rankBPanel;
     public GameObject rankCPanel;
@@ -95,22 +96,28 @@ public class GameManager : MonoBehaviour
         if (rankCPanel != null) rankCPanel.SetActive(false);
 
 
-        if (score >= 80f)
+        if(score>=100f)
+        {
+            if (rankSPanel != null) rankSPanel.SetActive(true);
+            StartCoroutine(playsound(0));
+        }
+
+        else if (score >= 80f)
         {
             if (rankAPanel != null) rankAPanel.SetActive(true);
-            StartCoroutine(playsound(0));
+            StartCoroutine(playsound(1));
 
         }
         else if (score >= 50f)
         {
             if (rankBPanel != null) rankBPanel.SetActive(true);
-            StartCoroutine(playsound(1));
+            StartCoroutine(playsound(2));
 
         }
         else
         {
             if (rankCPanel != null) rankCPanel.SetActive(true);
-            StartCoroutine(playsound(2));
+            StartCoroutine(playsound(3));
         }
 
 
