@@ -79,17 +79,17 @@ public class GameManager : MonoBehaviour
         if (isFinished) return;
         isFinished = true;
 
-      
-        float score = scoreTranslateManager.score;
+        float score = 0;
+        score= scoreTranslateManager.score;
         PlayerPrefs.SetFloat("LatestRating", score);
         PlayerPrefs.Save();
 
- 
+        scoreText.text = score.ToString("F1") + "%";
         if (rankAPanel != null) rankAPanel.SetActive(false);
         if (rankBPanel != null) rankBPanel.SetActive(false);
         if (rankCPanel != null) rankCPanel.SetActive(false);
 
-      
+
         if (score >= 80f)
         {
             if (rankAPanel != null) rankAPanel.SetActive(true);
@@ -103,15 +103,14 @@ public class GameManager : MonoBehaviour
             if (rankCPanel != null) rankCPanel.SetActive(true);
         }
 
-        
+
         if (gameClearPanel != null) gameClearPanel.SetActive(true);
         Time.timeScale = 0f;
     }
 
-    public void RetryGame()
+    public void Retry()
     {
         Time.timeScale = 1f;
-        string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
