@@ -5,8 +5,12 @@ using System.Collections.Generic;
 public class SpawnPrefabData
 {
     public GameObject prefab;
+
     [Range(0f, 100f)]
     public float probability;
+
+    [Header("このPrefabのスポーン間隔（空欄＝Waveのデフォルト）")]
+    public float customInterval = -1f; // -1ならWave/Spawnerのデフォルト
 }
 
 [System.Serializable]
@@ -17,6 +21,9 @@ public class SpawnWave
 
     [Header("このWaveの出現Prefabと確率")]
     public List<SpawnPrefabData> spawnPrefabs = new List<SpawnPrefabData>();
+
+    [Header("Waveのデフォルトスポーン間隔")]
+    public float defaultInterval = -1f; // -1ならSpawnerの spawnInterval を使う
 }
 
 public class PrefabSpawner : MonoBehaviour
@@ -24,7 +31,7 @@ public class PrefabSpawner : MonoBehaviour
     [Header("Wave設定")]
     public List<SpawnWave> waves = new List<SpawnWave>();
 
-    [Header("スポーン間隔")]
+    [Header("スポーン間隔（Wave/Prefabで指定がなければ使用）")]
     public float spawnInterval = 1f;
 
     private int currentWaveIndex = 0;
@@ -38,15 +45,18 @@ public class PrefabSpawner : MonoBehaviour
         spawnTimer += Time.deltaTime;
         waveTimer += Time.deltaTime;
 
+        // 現在のWave
+        SpawnWave currentWave = waves[currentWaveIndex];
+
         // スポーン処理
-        if (spawnTimer >= spawnInterval)
+        float interval = currentWave.defaultInterval > 0f ? currentWave.defaultInterval : spawnInterval;
+        if (spawnTimer >= interval)
         {
             Spawn();
             spawnTimer = 0f;
         }
 
         // Wave切り替え（最後のWaveは無限）
-        SpawnWave currentWave = waves[currentWaveIndex];
         if (currentWave.duration >= 0f && waveTimer >= currentWave.duration)
         {
             if (currentWaveIndex < waves.Count - 1)
@@ -62,16 +72,20 @@ public class PrefabSpawner : MonoBehaviour
         SpawnWave wave = waves[currentWaveIndex];
         if (wave.spawnPrefabs.Count == 0) return;
 
-        GameObject prefab = GetRandomPrefab(wave.spawnPrefabs);
-        if (prefab == null) return;
+        SpawnPrefabData data = GetRandomPrefabData(wave.spawnPrefabs);
+        if (data == null || data.prefab == null) return;
 
-        Instantiate(prefab, transform.position, Quaternion.identity);
+        Instantiate(data.prefab, transform.position, Quaternion.identity);
+
+        // 次回スポーンまでのタイマー調整
+        float interval = data.customInterval > 0f ? data.customInterval :
+                         (wave.defaultInterval > 0f ? wave.defaultInterval : spawnInterval);
+        spawnTimer = -interval + Time.deltaTime; // Update で加算される分を調整
     }
 
-    GameObject GetRandomPrefab(List<SpawnPrefabData> list)
+    SpawnPrefabData GetRandomPrefabData(List<SpawnPrefabData> list)
     {
         float totalProbability = 0f;
-
         foreach (var data in list)
         {
             totalProbability += data.probability;
@@ -85,7 +99,7 @@ public class PrefabSpawner : MonoBehaviour
             current += data.probability;
             if (randomValue <= current)
             {
-                return data.prefab;
+                return data;
             }
         }
 
