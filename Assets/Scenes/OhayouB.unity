@@ -494,220 +494,100 @@ MonoBehaviour:
   waves:
   - duration: 10
     spawnPrefabs:
+    - prefab: {fileID: 8069873806089551902, guid: 45312dd733ba3a844bd3b58029167efb, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 8546128381933762246, guid: c69b396b72a076c4d93ee25f69bd71ff, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 2258918788604344116, guid: a61a95528fa5cf34a96be19a0020b431, type: 3}
+      probability: 10
+      customInterval: -1
+    defaultInterval: -1
+  - duration: 10
+    spawnPrefabs:
+    - prefab: {fileID: 7810359272286227324, guid: f8b14f634fe59774385e0ab2130dc7c4, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 8069873806089551902, guid: 45312dd733ba3a844bd3b58029167efb, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 8546128381933762246, guid: c69b396b72a076c4d93ee25f69bd71ff, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 8744458543860457040, guid: 317f6208f4542aa479f5aa6d5711b23e, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 2258918788604344116, guid: a61a95528fa5cf34a96be19a0020b431, type: 3}
+      probability: 10
+      customInterval: -1
     - prefab: {fileID: 8822139613297302320, guid: 448ee14f9c1af3c4fb4e728612126e40, type: 3}
+      probability: 10
+      customInterval: -1
+    defaultInterval: -1
+  - duration: 10
+    spawnPrefabs:
+    - prefab: {fileID: 8069873806089551902, guid: 45312dd733ba3a844bd3b58029167efb, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 8546128381933762246, guid: c69b396b72a076c4d93ee25f69bd71ff, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 8744458543860457040, guid: 317f6208f4542aa479f5aa6d5711b23e, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 2258918788604344116, guid: a61a95528fa5cf34a96be19a0020b431, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 6254234761735838782, guid: 920068c18661de442baa245fdc1c2d65, type: 3}
+      probability: 20
+      customInterval: -1
+    defaultInterval: -1
+  - duration: 10
+    spawnPrefabs:
+    - prefab: {fileID: 7810359272286227324, guid: f8b14f634fe59774385e0ab2130dc7c4, type: 3}
       probability: 50
       customInterval: -1
-    - prefab: {fileID: 6536419560881513938, guid: 87c239791d41c824e81e53db677d8b0f, type: 3}
+    - prefab: {fileID: 8069873806089551902, guid: 45312dd733ba3a844bd3b58029167efb, type: 3}
       probability: 10
       customInterval: -1
-    - prefab: {fileID: 6198256655035695594, guid: 1f1f2d90530a8cf43a72439f83e8e143, type: 3}
+    - prefab: {fileID: 8546128381933762246, guid: c69b396b72a076c4d93ee25f69bd71ff, type: 3}
       probability: 10
       customInterval: -1
-    - prefab: {fileID: 1203027529894017242, guid: 1ff559cc840df6b4aa912820ced52701, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 7810359272286227324, guid: f8b14f634fe59774385e0ab2130dc7c4, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 4374470491221475434, guid: 573b5bca48a18b7439d1824899711414, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 4374470491221475434, guid: 573b5bca48a18b7439d1824899711414, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 2169196137032298423, guid: 2ec633ebf78ecca4b8f8f0ada14eb2b7, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 4943254233069669130, guid: f139cdee98b8766489b2fbc0167e94d5, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 4794562291188510264, guid: 2e0272ae380d2494fbca71a931102b8f, type: 3}
-      probability: 10
-      customInterval: -1
-    defaultInterval: -1
-  - duration: 10
-    spawnPrefabs:
-    - prefab: {fileID: 8822139613297302320, guid: 448ee14f9c1af3c4fb4e728612126e40, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 6536419560881513938, guid: 87c239791d41c824e81e53db677d8b0f, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 6198256655035695594, guid: 1f1f2d90530a8cf43a72439f83e8e143, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 1203027529894017242, guid: 1ff559cc840df6b4aa912820ced52701, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 7810359272286227324, guid: f8b14f634fe59774385e0ab2130dc7c4, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 4374470491221475434, guid: 573b5bca48a18b7439d1824899711414, type: 3}
+    - prefab: {fileID: 8744458543860457040, guid: 317f6208f4542aa479f5aa6d5711b23e, type: 3}
       probability: 10
       customInterval: -1
     - prefab: {fileID: 2258918788604344116, guid: a61a95528fa5cf34a96be19a0020b431, type: 3}
       probability: 10
       customInterval: -1
-    - prefab: {fileID: 8744458543860457040, guid: 317f6208f4542aa479f5aa6d5711b23e, type: 3}
-      probability: 10
-      customInterval: 0.1
-    - prefab: {fileID: 4911758096820129495, guid: 3ee4457a002e6b948afe24e0d2cbee31, type: 3}
-      probability: 10
-      customInterval: 0.1
-    - prefab: {fileID: 4943254233069669130, guid: f139cdee98b8766489b2fbc0167e94d5, type: 3}
-      probability: 10
-      customInterval: 0.1
-    - prefab: {fileID: 2169196137032298423, guid: 2ec633ebf78ecca4b8f8f0ada14eb2b7, type: 3}
-      probability: 10
-      customInterval: 0.1
-    defaultInterval: -1
-  - duration: 10
-    spawnPrefabs:
-    - prefab: {fileID: 8822139613297302320, guid: 448ee14f9c1af3c4fb4e728612126e40, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 6536419560881513938, guid: 87c239791d41c824e81e53db677d8b0f, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 6198256655035695594, guid: 1f1f2d90530a8cf43a72439f83e8e143, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 1203027529894017242, guid: 1ff559cc840df6b4aa912820ced52701, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 7810359272286227324, guid: f8b14f634fe59774385e0ab2130dc7c4, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 4374470491221475434, guid: 573b5bca48a18b7439d1824899711414, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 2258918788604344116, guid: a61a95528fa5cf34a96be19a0020b431, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 8744458543860457040, guid: 317f6208f4542aa479f5aa6d5711b23e, type: 3}
-      probability: 10
-      customInterval: 0.1
-    - prefab: {fileID: 5590684745239292538, guid: c5ab3164d095e514d99374abf906d27b, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 4403407976201347589, guid: 9495780d9a4a46b4e98eba0f46003451, type: 3}
-      probability: 10
-      customInterval: -1
-    defaultInterval: -1
-  - duration: 10
-    spawnPrefabs:
-    - prefab: {fileID: 8822139613297302320, guid: 448ee14f9c1af3c4fb4e728612126e40, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 6536419560881513938, guid: 87c239791d41c824e81e53db677d8b0f, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 6198256655035695594, guid: 1f1f2d90530a8cf43a72439f83e8e143, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 1203027529894017242, guid: 1ff559cc840df6b4aa912820ced52701, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 7810359272286227324, guid: f8b14f634fe59774385e0ab2130dc7c4, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 4374470491221475434, guid: 573b5bca48a18b7439d1824899711414, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 2258918788604344116, guid: a61a95528fa5cf34a96be19a0020b431, type: 3}
-      probability: 20
-      customInterval: -1
-    - prefab: {fileID: 8744458543860457040, guid: 317f6208f4542aa479f5aa6d5711b23e, type: 3}
-      probability: 20
-      customInterval: -1
-    - prefab: {fileID: 5590684745239292538, guid: c5ab3164d095e514d99374abf906d27b, type: 3}
-      probability: 20
-      customInterval: -1
-    - prefab: {fileID: 4403407976201347589, guid: 9495780d9a4a46b4e98eba0f46003451, type: 3}
+    - prefab: {fileID: 6254234761735838782, guid: 920068c18661de442baa245fdc1c2d65, type: 3}
       probability: 20
       customInterval: -1
     defaultInterval: -1
   - duration: 10
     spawnPrefabs:
-    - prefab: {fileID: 8822139613297302320, guid: 448ee14f9c1af3c4fb4e728612126e40, type: 3}
-      probability: 5
+    - prefab: {fileID: 8069873806089551902, guid: 45312dd733ba3a844bd3b58029167efb, type: 3}
+      probability: 10
       customInterval: -1
-    - prefab: {fileID: 6536419560881513938, guid: 87c239791d41c824e81e53db677d8b0f, type: 3}
-      probability: 5
+    - prefab: {fileID: 8546128381933762246, guid: c69b396b72a076c4d93ee25f69bd71ff, type: 3}
+      probability: 10
       customInterval: -1
-    - prefab: {fileID: 6198256655035695594, guid: 1f1f2d90530a8cf43a72439f83e8e143, type: 3}
-      probability: 5
-      customInterval: -1
-    - prefab: {fileID: 1203027529894017242, guid: 1ff559cc840df6b4aa912820ced52701, type: 3}
-      probability: 5
-      customInterval: -1
-    - prefab: {fileID: 7810359272286227324, guid: f8b14f634fe59774385e0ab2130dc7c4, type: 3}
-      probability: 5
-      customInterval: -1
-    - prefab: {fileID: 4374470491221475434, guid: 573b5bca48a18b7439d1824899711414, type: 3}
+    - prefab: {fileID: 8744458543860457040, guid: 317f6208f4542aa479f5aa6d5711b23e, type: 3}
       probability: 10
       customInterval: -1
     - prefab: {fileID: 2258918788604344116, guid: a61a95528fa5cf34a96be19a0020b431, type: 3}
-      probability: 20
+      probability: 10
       customInterval: -1
-    - prefab: {fileID: 8744458543860457040, guid: 317f6208f4542aa479f5aa6d5711b23e, type: 3}
-      probability: 20
-      customInterval: 0.1
-    - prefab: {fileID: 5590684745239292538, guid: c5ab3164d095e514d99374abf906d27b, type: 3}
+    - prefab: {fileID: 6254234761735838782, guid: 920068c18661de442baa245fdc1c2d65, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 6135104960854049169, guid: 02c9eeac8d5cdc44c800282b57e810a3, type: 3}
       probability: 20
       customInterval: -1
     - prefab: {fileID: 4403407976201347589, guid: 9495780d9a4a46b4e98eba0f46003451, type: 3}
       probability: 10
       customInterval: -1
-    - prefab: {fileID: 4794562291188510264, guid: 2e0272ae380d2494fbca71a931102b8f, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 8009722268163849573, guid: ac79cfcec09106f4d9aa4154e6b2fbbc, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 2169196137032298423, guid: 2ec633ebf78ecca4b8f8f0ada14eb2b7, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 4911758096820129495, guid: 3ee4457a002e6b948afe24e0d2cbee31, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 3619442861628317704, guid: d54cb821cf71a5f4692f1c6620487a65, type: 3}
-      probability: 10
-      customInterval: -1
-    defaultInterval: 1
-  - duration: -1
-    spawnPrefabs:
-    - prefab: {fileID: 8822139613297302320, guid: 448ee14f9c1af3c4fb4e728612126e40, type: 3}
-      probability: 5
-      customInterval: -1
-    - prefab: {fileID: 6536419560881513938, guid: 87c239791d41c824e81e53db677d8b0f, type: 3}
-      probability: 5
-      customInterval: -1
-    - prefab: {fileID: 6198256655035695594, guid: 1f1f2d90530a8cf43a72439f83e8e143, type: 3}
-      probability: 5
-      customInterval: -1
-    - prefab: {fileID: 1203027529894017242, guid: 1ff559cc840df6b4aa912820ced52701, type: 3}
-      probability: 5
-      customInterval: -1
-    - prefab: {fileID: 7810359272286227324, guid: f8b14f634fe59774385e0ab2130dc7c4, type: 3}
-      probability: 5
-      customInterval: -1
-    - prefab: {fileID: 4374470491221475434, guid: 573b5bca48a18b7439d1824899711414, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 2258918788604344116, guid: a61a95528fa5cf34a96be19a0020b431, type: 3}
-      probability: 20
-      customInterval: -1
-    - prefab: {fileID: 8744458543860457040, guid: 317f6208f4542aa479f5aa6d5711b23e, type: 3}
-      probability: 20
-      customInterval: 0.1
-    - prefab: {fileID: 5590684745239292538, guid: c5ab3164d095e514d99374abf906d27b, type: 3}
-      probability: 20
-      customInterval: -1
-    - prefab: {fileID: 4403407976201347589, guid: 9495780d9a4a46b4e98eba0f46003451, type: 3}
-      probability: 10
-      customInterval: -1
-    defaultInterval: 0.5
+    defaultInterval: -1
   spawnInterval: 1.3
 --- !u!4 &89162893
 Transform:
@@ -789,220 +669,100 @@ MonoBehaviour:
   waves:
   - duration: 10
     spawnPrefabs:
-    - prefab: {fileID: 8009722268163849573, guid: ac79cfcec09106f4d9aa4154e6b2fbbc, type: 3}
+    - prefab: {fileID: 8069873806089551902, guid: 45312dd733ba3a844bd3b58029167efb, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 8546128381933762246, guid: c69b396b72a076c4d93ee25f69bd71ff, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 2258918788604344116, guid: a61a95528fa5cf34a96be19a0020b431, type: 3}
+      probability: 10
+      customInterval: -1
+    defaultInterval: -1
+  - duration: 10
+    spawnPrefabs:
+    - prefab: {fileID: 7810359272286227324, guid: f8b14f634fe59774385e0ab2130dc7c4, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 8069873806089551902, guid: 45312dd733ba3a844bd3b58029167efb, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 8546128381933762246, guid: c69b396b72a076c4d93ee25f69bd71ff, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 8744458543860457040, guid: 317f6208f4542aa479f5aa6d5711b23e, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 2258918788604344116, guid: a61a95528fa5cf34a96be19a0020b431, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 8822139613297302320, guid: 448ee14f9c1af3c4fb4e728612126e40, type: 3}
+      probability: 10
+      customInterval: -1
+    defaultInterval: -1
+  - duration: 10
+    spawnPrefabs:
+    - prefab: {fileID: 8069873806089551902, guid: 45312dd733ba3a844bd3b58029167efb, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 8546128381933762246, guid: c69b396b72a076c4d93ee25f69bd71ff, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 8744458543860457040, guid: 317f6208f4542aa479f5aa6d5711b23e, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 2258918788604344116, guid: a61a95528fa5cf34a96be19a0020b431, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 6254234761735838782, guid: 920068c18661de442baa245fdc1c2d65, type: 3}
+      probability: 20
+      customInterval: -1
+    defaultInterval: -1
+  - duration: 10
+    spawnPrefabs:
+    - prefab: {fileID: 7810359272286227324, guid: f8b14f634fe59774385e0ab2130dc7c4, type: 3}
       probability: 50
       customInterval: -1
-    - prefab: {fileID: 6536419560881513938, guid: 87c239791d41c824e81e53db677d8b0f, type: 3}
+    - prefab: {fileID: 8069873806089551902, guid: 45312dd733ba3a844bd3b58029167efb, type: 3}
       probability: 10
       customInterval: -1
-    - prefab: {fileID: 6198256655035695594, guid: 1f1f2d90530a8cf43a72439f83e8e143, type: 3}
+    - prefab: {fileID: 8546128381933762246, guid: c69b396b72a076c4d93ee25f69bd71ff, type: 3}
       probability: 10
       customInterval: -1
-    - prefab: {fileID: 1203027529894017242, guid: 1ff559cc840df6b4aa912820ced52701, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 7810359272286227324, guid: f8b14f634fe59774385e0ab2130dc7c4, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 4374470491221475434, guid: 573b5bca48a18b7439d1824899711414, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 4374470491221475434, guid: 573b5bca48a18b7439d1824899711414, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 2169196137032298423, guid: 2ec633ebf78ecca4b8f8f0ada14eb2b7, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 4943254233069669130, guid: f139cdee98b8766489b2fbc0167e94d5, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 4794562291188510264, guid: 2e0272ae380d2494fbca71a931102b8f, type: 3}
-      probability: 10
-      customInterval: -1
-    defaultInterval: -1
-  - duration: 10
-    spawnPrefabs:
-    - prefab: {fileID: 8822139613297302320, guid: 448ee14f9c1af3c4fb4e728612126e40, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 6536419560881513938, guid: 87c239791d41c824e81e53db677d8b0f, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 6198256655035695594, guid: 1f1f2d90530a8cf43a72439f83e8e143, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 1203027529894017242, guid: 1ff559cc840df6b4aa912820ced52701, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 7810359272286227324, guid: f8b14f634fe59774385e0ab2130dc7c4, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 4374470491221475434, guid: 573b5bca48a18b7439d1824899711414, type: 3}
+    - prefab: {fileID: 8744458543860457040, guid: 317f6208f4542aa479f5aa6d5711b23e, type: 3}
       probability: 10
       customInterval: -1
     - prefab: {fileID: 2258918788604344116, guid: a61a95528fa5cf34a96be19a0020b431, type: 3}
       probability: 10
       customInterval: -1
-    - prefab: {fileID: 8744458543860457040, guid: 317f6208f4542aa479f5aa6d5711b23e, type: 3}
-      probability: 10
-      customInterval: 0.1
-    - prefab: {fileID: 4911758096820129495, guid: 3ee4457a002e6b948afe24e0d2cbee31, type: 3}
-      probability: 10
-      customInterval: 0.1
-    - prefab: {fileID: 4943254233069669130, guid: f139cdee98b8766489b2fbc0167e94d5, type: 3}
-      probability: 10
-      customInterval: 0.1
-    - prefab: {fileID: 2169196137032298423, guid: 2ec633ebf78ecca4b8f8f0ada14eb2b7, type: 3}
-      probability: 10
-      customInterval: 0.1
-    defaultInterval: -1
-  - duration: 10
-    spawnPrefabs:
-    - prefab: {fileID: 8822139613297302320, guid: 448ee14f9c1af3c4fb4e728612126e40, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 6536419560881513938, guid: 87c239791d41c824e81e53db677d8b0f, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 6198256655035695594, guid: 1f1f2d90530a8cf43a72439f83e8e143, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 1203027529894017242, guid: 1ff559cc840df6b4aa912820ced52701, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 7810359272286227324, guid: f8b14f634fe59774385e0ab2130dc7c4, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 4374470491221475434, guid: 573b5bca48a18b7439d1824899711414, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 2258918788604344116, guid: a61a95528fa5cf34a96be19a0020b431, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 8744458543860457040, guid: 317f6208f4542aa479f5aa6d5711b23e, type: 3}
-      probability: 10
-      customInterval: 0.1
-    - prefab: {fileID: 5590684745239292538, guid: c5ab3164d095e514d99374abf906d27b, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 4403407976201347589, guid: 9495780d9a4a46b4e98eba0f46003451, type: 3}
-      probability: 10
-      customInterval: -1
-    defaultInterval: -1
-  - duration: 10
-    spawnPrefabs:
-    - prefab: {fileID: 8822139613297302320, guid: 448ee14f9c1af3c4fb4e728612126e40, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 6536419560881513938, guid: 87c239791d41c824e81e53db677d8b0f, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 6198256655035695594, guid: 1f1f2d90530a8cf43a72439f83e8e143, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 1203027529894017242, guid: 1ff559cc840df6b4aa912820ced52701, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 7810359272286227324, guid: f8b14f634fe59774385e0ab2130dc7c4, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 4374470491221475434, guid: 573b5bca48a18b7439d1824899711414, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 2258918788604344116, guid: a61a95528fa5cf34a96be19a0020b431, type: 3}
-      probability: 20
-      customInterval: -1
-    - prefab: {fileID: 8744458543860457040, guid: 317f6208f4542aa479f5aa6d5711b23e, type: 3}
-      probability: 20
-      customInterval: -1
-    - prefab: {fileID: 5590684745239292538, guid: c5ab3164d095e514d99374abf906d27b, type: 3}
-      probability: 20
-      customInterval: -1
-    - prefab: {fileID: 4403407976201347589, guid: 9495780d9a4a46b4e98eba0f46003451, type: 3}
+    - prefab: {fileID: 6254234761735838782, guid: 920068c18661de442baa245fdc1c2d65, type: 3}
       probability: 20
       customInterval: -1
     defaultInterval: -1
   - duration: 10
     spawnPrefabs:
-    - prefab: {fileID: 8822139613297302320, guid: 448ee14f9c1af3c4fb4e728612126e40, type: 3}
-      probability: 5
+    - prefab: {fileID: 8069873806089551902, guid: 45312dd733ba3a844bd3b58029167efb, type: 3}
+      probability: 10
       customInterval: -1
-    - prefab: {fileID: 6536419560881513938, guid: 87c239791d41c824e81e53db677d8b0f, type: 3}
-      probability: 5
+    - prefab: {fileID: 8546128381933762246, guid: c69b396b72a076c4d93ee25f69bd71ff, type: 3}
+      probability: 10
       customInterval: -1
-    - prefab: {fileID: 6198256655035695594, guid: 1f1f2d90530a8cf43a72439f83e8e143, type: 3}
-      probability: 5
-      customInterval: -1
-    - prefab: {fileID: 1203027529894017242, guid: 1ff559cc840df6b4aa912820ced52701, type: 3}
-      probability: 5
-      customInterval: -1
-    - prefab: {fileID: 7810359272286227324, guid: f8b14f634fe59774385e0ab2130dc7c4, type: 3}
-      probability: 5
-      customInterval: -1
-    - prefab: {fileID: 4374470491221475434, guid: 573b5bca48a18b7439d1824899711414, type: 3}
+    - prefab: {fileID: 8744458543860457040, guid: 317f6208f4542aa479f5aa6d5711b23e, type: 3}
       probability: 10
       customInterval: -1
     - prefab: {fileID: 2258918788604344116, guid: a61a95528fa5cf34a96be19a0020b431, type: 3}
-      probability: 20
+      probability: 10
       customInterval: -1
-    - prefab: {fileID: 8744458543860457040, guid: 317f6208f4542aa479f5aa6d5711b23e, type: 3}
-      probability: 20
-      customInterval: 0.1
-    - prefab: {fileID: 5590684745239292538, guid: c5ab3164d095e514d99374abf906d27b, type: 3}
+    - prefab: {fileID: 6254234761735838782, guid: 920068c18661de442baa245fdc1c2d65, type: 3}
+      probability: 10
+      customInterval: -1
+    - prefab: {fileID: 6135104960854049169, guid: 02c9eeac8d5cdc44c800282b57e810a3, type: 3}
       probability: 20
       customInterval: -1
     - prefab: {fileID: 4403407976201347589, guid: 9495780d9a4a46b4e98eba0f46003451, type: 3}
       probability: 10
       customInterval: -1
-    - prefab: {fileID: 4794562291188510264, guid: 2e0272ae380d2494fbca71a931102b8f, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 8009722268163849573, guid: ac79cfcec09106f4d9aa4154e6b2fbbc, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 2169196137032298423, guid: 2ec633ebf78ecca4b8f8f0ada14eb2b7, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 4911758096820129495, guid: 3ee4457a002e6b948afe24e0d2cbee31, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 3619442861628317704, guid: d54cb821cf71a5f4692f1c6620487a65, type: 3}
-      probability: 10
-      customInterval: -1
-    defaultInterval: 1
-  - duration: -1
-    spawnPrefabs:
-    - prefab: {fileID: 8822139613297302320, guid: 448ee14f9c1af3c4fb4e728612126e40, type: 3}
-      probability: 5
-      customInterval: -1
-    - prefab: {fileID: 6536419560881513938, guid: 87c239791d41c824e81e53db677d8b0f, type: 3}
-      probability: 5
-      customInterval: -1
-    - prefab: {fileID: 6198256655035695594, guid: 1f1f2d90530a8cf43a72439f83e8e143, type: 3}
-      probability: 5
-      customInterval: -1
-    - prefab: {fileID: 1203027529894017242, guid: 1ff559cc840df6b4aa912820ced52701, type: 3}
-      probability: 5
-      customInterval: -1
-    - prefab: {fileID: 7810359272286227324, guid: f8b14f634fe59774385e0ab2130dc7c4, type: 3}
-      probability: 5
-      customInterval: -1
-    - prefab: {fileID: 4374470491221475434, guid: 573b5bca48a18b7439d1824899711414, type: 3}
-      probability: 10
-      customInterval: -1
-    - prefab: {fileID: 2258918788604344116, guid: a61a95528fa5cf34a96be19a0020b431, type: 3}
-      probability: 20
-      customInterval: -1
-    - prefab: {fileID: 8744458543860457040, guid: 317f6208f4542aa479f5aa6d5711b23e, type: 3}
-      probability: 20
-      customInterval: 0.1
-    - prefab: {fileID: 5590684745239292538, guid: c5ab3164d095e514d99374abf906d27b, type: 3}
-      probability: 20
-      customInterval: -1
-    - prefab: {fileID: 4403407976201347589, guid: 9495780d9a4a46b4e98eba0f46003451, type: 3}
-      probability: 10
-      customInterval: -1
-    defaultInterval: 0.5
+    defaultInterval: -1
   spawnInterval: 1.3
 --- !u!4 &89864515
 Transform:
@@ -3623,7 +3383,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -65}
+  m_AnchoredPosition: {x: 0, y: -82}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &502391651
@@ -9062,11 +8822,11 @@ GameObject:
   - component: {fileID: 572264648}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &572264648
 AudioListener:
   m_ObjectHideFlags: 0
@@ -10227,7 +9987,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 100}
+  m_AnchoredPosition: {x: 0, y: -3}
   m_SizeDelta: {x: 1200, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &820313709
@@ -11993,6 +11753,95 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1307587914428617298, guid: 1f1f2d90530a8cf43a72439f83e8e143, type: 3}
   m_PrefabInstance: {fileID: 8660269690615181310}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1199825491
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 721532932756044561, guid: 0bd6a58820784f44db1290384b3a6204, type: 3}
+      propertyPath: m_Name
+      value: MosaixCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 721532932756044561, guid: 0bd6a58820784f44db1290384b3a6204, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159545511226817646, guid: 0bd6a58820784f44db1290384b3a6204, type: 3}
+      propertyPath: field of view
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026536366471902226, guid: 0bd6a58820784f44db1290384b3a6204, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7147631561437438119, guid: 0bd6a58820784f44db1290384b3a6204, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2499998
+      objectReference: {fileID: 0}
+    - target: {fileID: 7147631561437438119, guid: 0bd6a58820784f44db1290384b3a6204, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7147631561437438119, guid: 0bd6a58820784f44db1290384b3a6204, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 7147631561437438119, guid: 0bd6a58820784f44db1290384b3a6204, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.02002716
+      objectReference: {fileID: 0}
+    - target: {fileID: 7147631561437438119, guid: 0bd6a58820784f44db1290384b3a6204, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.8499981
+      objectReference: {fileID: 0}
+    - target: {fileID: 7147631561437438119, guid: 0bd6a58820784f44db1290384b3a6204, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.9000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 7147631561437438119, guid: 0bd6a58820784f44db1290384b3a6204, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999112
+      objectReference: {fileID: 0}
+    - target: {fileID: 7147631561437438119, guid: 0bd6a58820784f44db1290384b3a6204, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.013329999
+      objectReference: {fileID: 0}
+    - target: {fileID: 7147631561437438119, guid: 0bd6a58820784f44db1290384b3a6204, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7147631561437438119, guid: 0bd6a58820784f44db1290384b3a6204, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 4.656613e-10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7147631561437438119, guid: 0bd6a58820784f44db1290384b3a6204, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7147631561437438119, guid: 0bd6a58820784f44db1290384b3a6204, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7147631561437438119, guid: 0bd6a58820784f44db1290384b3a6204, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8383095213474619934, guid: 0bd6a58820784f44db1290384b3a6204, type: 3}
+      propertyPath: MosaicBlocks
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8471953032609059172, guid: 0bd6a58820784f44db1290384b3a6204, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0bd6a58820784f44db1290384b3a6204, type: 3}
 --- !u!1001 &1201483534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15331,7 +15180,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
+  m_TextWrappingMode: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -15384,7 +15233,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -50}
-  m_SizeDelta: {x: 1980, y: 50}
+  m_SizeDelta: {x: 2197, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1565178834
 GameObject:
@@ -18536,7 +18385,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 100}
+  m_AnchoredPosition: {x: 0, y: 28}
   m_SizeDelta: {x: 1000, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2091671851
@@ -36248,6 +36097,7 @@ SceneRoots:
   - {fileID: 1541167716}
   - {fileID: 612626212}
   - {fileID: 1001572176067964307}
+  - {fileID: 1199825491}
   - {fileID: 1901968103}
   - {fileID: 1627120161}
   - {fileID: 1204775582}
