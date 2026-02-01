@@ -8431,7 +8431,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a54ef974f31c88d43b1e507f93361195, type: 3}
   - {fileID: 8300000, guid: 736d2a8650e0f43489994d8d1d463b28, type: 3}
   - {fileID: 8300000, guid: 82490163260534f4386596eb470778b7, type: 3}
-  - {fileID: 8300000, guid: 6e50839851feb5d4c923b8ee7f0634ae, type: 3}
+  - {fileID: 8300000, guid: 2a6a72b8842945a4b9bd0c7884fc54e0, type: 3}
   - {fileID: 8300000, guid: dc53fe1e9364a1b4592b869eee723652, type: 3}
 --- !u!114 &1343760897
 MonoBehaviour:
@@ -9586,7 +9586,6 @@ MonoBehaviour:
   areaRect: {fileID: 209143670}
   targets:
   - {fileID: -2971772271963682490, guid: c388dc66f1d32794b97694448c4203a8, type: 3}
-  scoreText: {fileID: 1545924782}
   deltaPerFrame: 1
   score: 0
   insideCount: 0

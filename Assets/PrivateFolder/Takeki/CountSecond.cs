@@ -65,6 +65,8 @@ public class CountSecond : MonoBehaviour
         countImage.gameObject.SetActive(true);
         countText.text = "";
         countText.gameObject.SetActive(false);
+        SoundManager.Instance.PlaySE(audioSource, audioClip[3]);
+        SoundManager.Instance.PlaySE(audioSource, audioClip[4]);
 
         // 指定した秒数（実時間）待機
         yield return new WaitForSecondsRealtime(countFinishDisplayTime);
@@ -75,8 +77,6 @@ public class CountSecond : MonoBehaviour
 
     public void StartREC()
     {
-        SoundManager.Instance.PlaySE(audioSource, audioClip[3]);
-        SoundManager.Instance.PlaySE(audioSource, audioClip[4]);
         Time.timeScale = 1f; // 時間を再開
         countImage.gameObject.SetActive(false);
         countText.gameObject.SetActive(false);
