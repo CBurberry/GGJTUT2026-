@@ -19,6 +19,11 @@ public class GameManager : MonoBehaviour
 
     private bool isFinished = false;
 
+    [Header("--- ƒ‰ƒ“ƒN•Êƒpƒlƒ‹ ---")]
+    public GameObject rankAPanel;
+    public GameObject rankBPanel;
+    public GameObject rankCPanel;
+
     void Start()
     {
         
@@ -71,19 +76,34 @@ public class GameManager : MonoBehaviour
     {
         if (isFinished) return;
         isFinished = true;
-        Time.timeScale = 0f;
 
-        PlayerPrefs.SetFloat("LatestRating", scoreTranslateManager.score);
+      
+        float score = scoreTranslateManager.score;
+        PlayerPrefs.SetFloat("LatestRating", score);
         PlayerPrefs.Save();
 
-        if (scoreText != null)
+ 
+        if (rankAPanel != null) rankAPanel.SetActive(false);
+        if (rankBPanel != null) rankBPanel.SetActive(false);
+        if (rankCPanel != null) rankCPanel.SetActive(false);
+
+      
+        if (score >= 80f)
         {
-            scoreText.text = scoreTranslateManager.score.ToString("F1") + " %";
+            if (rankAPanel != null) rankAPanel.SetActive(true);
+        }
+        else if (score >= 50f)
+        {
+            if (rankBPanel != null) rankBPanel.SetActive(true);
+        }
+        else
+        {
+            if (rankCPanel != null) rankCPanel.SetActive(true);
         }
 
         
-
         if (gameClearPanel != null) gameClearPanel.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void RetryGame()
