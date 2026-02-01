@@ -11,7 +11,7 @@ public class InputScoreText : MonoBehaviour
     {
         if(Time.timeScale != 0)
         {
-            scoreText.text = slider.value.ToString("F1") + "%";
+            scoreText.text = "Viewership: " + slider.value.ToString("F1") + "%";
         }
     }
 }
